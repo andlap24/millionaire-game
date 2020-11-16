@@ -1,3 +1,3 @@
 # Who Wants to Be a Millionaire?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Demo Link](https://andlap24.github.io/millionaire-game).
