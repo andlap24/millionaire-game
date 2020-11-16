@@ -1,0 +1,7 @@
+<!-- <svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1440 0V900H0L1440 0Z" fill="#FFF3EB"/>
+</svg> -->
+
+<svg width="7em" height="7em" viewBox="0 0 2 2" preserveAspectRatio="none"> <!-- width и/или height можно задать в процентах -->
+<polygon fill="red" points="0,0 2,0 1,2"/>
+</svg>

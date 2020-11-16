@@ -1,24 +1,29 @@
 import React from 'react';
+import { Link, Route } from 'react-router-dom';
 import './App.scss';
-import { Switch, Link, Route } from 'react-router-dom';
+
+import { Game } from './components/Game';
+
+import { ReactComponent as ThumbUp } from './images/thumb-up.svg';
 
 export const App = () => (
-  <div>
-    React starter pack
-    <div>
-      <nav className="nav">
-        <Link to="/">Home</Link>
-        <Link to="/users">Users</Link>
-      </nav>
+  <div className="wrapper">
+    <div className="App">
+      <div className="App__main-image">
+        <ThumbUp />
+      </div>
+      <div className="App__main main">
+        <h1 className="main__title">
+          Who wants to be
+          <br />
+          a millionaire?
+        </h1>
+        <Link className="main__btn" to="/game">
+          Start
+        </Link>
 
-      <Switch>
-        <Route path="/users">
-          <div>Users page</div>
-        </Route>
-        <Route path="/">
-          <div>Home page</div>
-        </Route>
-      </Switch>
+        <Route path="/game" component={Game} />
+      </div>
     </div>
   </div>
 );
