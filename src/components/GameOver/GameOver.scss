@@ -1,0 +1,43 @@
+.game-over {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  &__image {
+    width: 624px;
+    height: 367px;
+  }
+}
+
+.main {
+  &__text {
+    font-size: 56px;
+  }
+
+  &__text > span {
+    font-size: 32px;
+    color: #1C1C21;
+    opacity: 0.5;
+  }
+
+  &__btn {
+    outline: none;
+    width: 296px;
+    height: 64px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #FF8B37;
+    color: white;
+    font-size: 20px;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: #FFAC70;
+    }
+  }
+}

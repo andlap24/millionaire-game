@@ -1,0 +1,41 @@
+@import '../../styles/vars.scss';
+
+.Game {
+  display: flex;
+  height: 100vh;
+}
+
+.body {
+  flex-grow: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: $black-5;
+
+  padding: 133px 80px 122px;
+
+  &__question {
+    font-size: 32px;
+    max-width: 624px;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 422px);
+  gap: 32px 0;
+
+  &__option {
+    position: relative;
+  }
+
+  &__text {
+    position: absolute;
+  }
+
+  &__text > span {
+    color: $orange-100;
+  }
+}

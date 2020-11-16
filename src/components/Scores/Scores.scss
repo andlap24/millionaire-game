@@ -1,0 +1,21 @@
+@import '../../styles/vars.scss';
+
+.scores {
+  flex-grow: 1;
+  font-size: 20px;
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    margin-bottom: 8px;
+  }
+
+  &__item-active {
+    color: $orange-100;
+    border: 1px solid $orange-100;
+  }
+}
