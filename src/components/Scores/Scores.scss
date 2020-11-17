@@ -23,7 +23,8 @@
     cursor: pointer;
   }
 
-  &__item:hover {
+  &__item--active {
+    @extend .scores__item;
     background: url(../../images/small-active-rect.svg) no-repeat;
     color: $orange-100;
   }

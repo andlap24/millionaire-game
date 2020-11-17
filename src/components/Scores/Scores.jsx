@@ -2,28 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Scores.scss';
 
+import classNames from 'classnames';
+
 import scores from '../../api/scores.json';
 
-export const Scores = ({ isAnswerCorrect }) => {
-  const [totalScore, setTotalScore] = useState([]);
-
-  const handleActiveScore = () => {
-    if (isAnswerCorrect) {
-      setTotalScore(1000);
-    }
-  };
-
-  return (
-    <div className="Game__scores scores">
-      {scores.map(score => (
-        <div className="scores__item">
-          <div>{score}</div>
-        </div>
-      ))}
-    </div>
-  );
-};
+export const Scores = ({ counter }) => (
+  <div className="Game__scores scores">
+    {scores.map(score => (
+      <div className={classNames(
+        counter === score.id
+          ? 'scores__item--active'
+          : 'scores__item',
+      )}
+      >
+        <div>{score.score}</div>
+      </div>
+    ))}
+  </div>
+);
 
 Scores.propTypes = {
-  isAnswerCorrect: PropTypes.bool.isRequired,
+  counter: PropTypes.number.isRequired,
 };

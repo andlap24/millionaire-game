@@ -11,25 +11,20 @@ import questions from '../../api/questions.json';
 
 export const Game = () => {
   const [id, setId] = useState(1);
-  const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
+  const [counter, setCounter] = useState(0);
 
   const handleQuestionId = (questionId, correctAnswer, userAnswer) => {
-    // eslint-disable-next-line
-    console.log(userAnswer);
-
     if (userAnswer === correctAnswer) {
       setId(questionId + 1);
-      setIsAnswerCorrect(true);
+      scoreCouner();
     }
   };
 
-  /* const toggleButtonStatus = (correctAnswer, userAnswer) => {
-    if (userAnswer === correctAnswer) {
-      return '--correct';
-    }
-
-    return '--wrong';
-  }; */
+  const scoreCouner = () => (
+    // eslint-disable-next-line
+    console.log(counter),
+    setCounter(counter + 1)
+  );
 
   return (
     <div className="Game">
@@ -72,7 +67,7 @@ export const Game = () => {
           )
         ))}
       </div>
-      <Scores isAnswerCorrect={isAnswerCorrect} />
+      <Scores counter={counter} />
     </div>
   );
 };
