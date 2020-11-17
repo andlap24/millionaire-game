@@ -26,6 +26,7 @@
   display: grid;
   grid-template-columns: repeat(2, 405px);
   gap: 32px 0;
+  margin: 0 auto;
 
   &__option {
     background: url(../../images/inactive-rectangle.svg) no-repeat;

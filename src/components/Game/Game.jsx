@@ -1,14 +1,17 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Game.scss';
+
+import classNames from 'classnames';
 
 import { Scores } from '../Scores';
 import questions from '../../api/questions.json';
 
 export const Game = () => {
   const [id, setId] = useState(1);
-  const [isInCorrect, setIsInCorrect] = useState(false);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
 
   const handleQuestionId = (questionId, correctAnswer, userAnswer) => {
     // eslint-disable-next-line
@@ -16,14 +19,17 @@ export const Game = () => {
 
     if (userAnswer === correctAnswer) {
       setId(questionId + 1);
-    } else {
-      displayWrongAnswer();
+      setIsAnswerCorrect(true);
     }
   };
 
-  const displayWrongAnswer = () => (
-    setIsInCorrect(true)
-  );
+  /* const toggleButtonStatus = (correctAnswer, userAnswer) => {
+    if (userAnswer === correctAnswer) {
+      return '--correct';
+    }
+
+    return '--wrong';
+  }; */
 
   return (
     <div className="Game">
@@ -38,7 +44,11 @@ export const Game = () => {
                 {question.content.map(answer => (
                   <div
                     key={answer}
-                    className="list__option"
+                    className={classNames(
+                      answer === question.correct
+                        ? 'list__option--correct'
+                        : 'list__option--wrong',
+                    )}
                     role="button"
                     onClick={() => (
                       handleQuestionId(
@@ -55,16 +65,14 @@ export const Game = () => {
                   </div>
                 ))}
               </div>
-              {isInCorrect && (
-                <p>Wrong Answer</p>
+              {question.id > 12 && (
+                <Link to="/gameover" />
               )}
             </>
           )
         ))}
       </div>
-      <div className="Game__scores scores">
-        <Scores />
-      </div>
+      <Scores isAnswerCorrect={isAnswerCorrect} />
     </div>
   );
 };

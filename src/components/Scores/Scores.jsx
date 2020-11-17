@@ -1,20 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Scores.scss';
 
-const scores = [
-  '$1,000,000',
-  '$500,000',
-  '$250,000',
-  '$125,000',
-  '$64,000',
-  '$32,000',
-  '$16,000',
-  '$4,000',
-  '$2,000',
-  '$1,000',
-  '$500',
-];
+import scores from '../../api/scores.json';
 
-export const Scores = () => (
-  scores.map(score => <div className="scores__item">{score}</div>)
-);
+export const Scores = ({ isAnswerCorrect }) => {
+  const [totalScore, setTotalScore] = useState([]);
+
+  const handleActiveScore = () => {
+    if (isAnswerCorrect) {
+      setTotalScore(1000);
+    }
+  };
+
+  return (
+    <div className="Game__scores scores">
+      {scores.map(score => (
+        <div className="scores__item">
+          <div>{score}</div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+Scores.propTypes = {
+  isAnswerCorrect: PropTypes.bool.isRequired,
+};
