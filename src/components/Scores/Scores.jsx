@@ -1,9 +1,6 @@
 import React from 'react';
 import './Scores.scss';
 
-// eslint-disable-next-line
-import { ReactComponent as ScoreBlock } from '../../images/rectangle-border-score.svg';
-
 const scores = [
   '$1,000,000',
   '$500,000',
@@ -19,5 +16,5 @@ const scores = [
 ];
 
 export const Scores = () => (
-  scores.map(score => <div className="scores__item"><ScoreBlock /></div>)
+  scores.map(score => <div className="scores__item">{score}</div>)
 );

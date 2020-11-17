@@ -24,18 +24,34 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(2, 422px);
+  grid-template-columns: repeat(2, 405px);
   gap: 32px 0;
 
   &__option {
-    position: relative;
+    background: url(../../images/inactive-rectangle.svg) no-repeat;
+    height: 72px;
+    cursor: pointer;
   }
 
-  &__text {
-    position: absolute;
+  &__option:hover {
+    background: url(../../images/hover-rectangle.svg) no-repeat;
   }
 
-  &__text > span {
-    color: $orange-100;
+  &__option--correct {
+    background: url(../../images/correct-rectangle.svg) no-repeat;
+  }
+
+  &__option--wrong {
+    background: url(../../images/wrong-rectangle.svg) no-repeat;
+  }
+
+  &__option--selected {
+    background: url(../../images/selected-rectangle.svg) no-repeat;
+  }
+
+  &__option-text {
+    user-select: none;
+    line-height: 72px;
+    margin-left: 48px;
   }
 }
