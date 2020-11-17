@@ -1,3 +1,5 @@
+@import '../../styles/vars.scss';
+
 .game-over {
   display: flex;
   justify-content: center;
@@ -23,21 +25,6 @@
   }
 
   &__btn {
-    outline: none;
-    width: 296px;
-    height: 64px;
-
-    border: none;
-    border-radius: 12px;
-
-    background-color: #FF8B37;
-    color: white;
-    font-size: 20px;
-
-    cursor: pointer;
-
-    &:hover {
-      background-color: #FFAC70;
-    }
+    @include defaultButton;
   }
 }

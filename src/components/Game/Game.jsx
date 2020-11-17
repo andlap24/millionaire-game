@@ -1,24 +1,36 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+/* import { Link } from 'react-router-dom'; */
+import classNames from 'classnames';
 import './Game.scss';
 
-import classNames from 'classnames';
-
 import { Scores } from '../Scores';
+/* import { GameOver } from '../GameOver'; */
 import questions from '../../api/questions.json';
 
 export const Game = () => {
   const [id, setId] = useState(1);
   const [counter, setCounter] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState([]);
+  // eslint-disable-next-line
+  const [buttonVisibility, setButtonVisibility] = useState('body__question-btn');
 
-  const handleQuestionId = (questionId, correctAnswer, userAnswer) => {
+  const handleQuestion = (questionId, correctAnswer, userAnswer) => {
     if (userAnswer === correctAnswer) {
       setId(questionId + 1);
       scoreCouner();
     }
   };
+
+  const checkAnswer = (usersAnswer) => {
+    setSelectedAnswer(usersAnswer);
+    submitAnswer();
+  };
+
+  const submitAnswer = () => (
+    setButtonVisibility('body__question-btn--visible')
+  );
 
   const scoreCouner = () => (
     // eslint-disable-next-line
@@ -33,24 +45,27 @@ export const Game = () => {
           question.id === id && (
             <>
               <h3 key={question.id} className="body__question">
-                {question.question}
+                {`${question.question} (${question.correct})`}
               </h3>
+              <button
+                type="button"
+                className={buttonVisibility}
+                onClick={() => handleQuestion()}
+              >
+                Submit
+              </button>
               <div className="body__list list">
                 {question.content.map(answer => (
                   <div
                     key={answer}
                     className={classNames(
-                      answer === question.correct
-                        ? 'list__option--correct'
-                        : 'list__option--wrong',
+                      selectedAnswer === answer
+                        ? 'list__option--selected'
+                        : 'list__option',
                     )}
                     role="button"
                     onClick={() => (
-                      handleQuestionId(
-                        question.id,
-                        question.correct,
-                        answer,
-                      )
+                      checkAnswer(answer)
                     )}
                   >
                     <p className="list__option-text">
@@ -60,9 +75,6 @@ export const Game = () => {
                   </div>
                 ))}
               </div>
-              {question.id > 12 && (
-                <Link to="/gameover" />
-              )}
             </>
           )
         ))}

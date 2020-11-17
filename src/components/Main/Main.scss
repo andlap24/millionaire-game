@@ -21,27 +21,13 @@
 
 .main {
   &__title {
+    user-select: none;
     font-size: 56px;
     line-height: 65px;
     margin-bottom: 64px;
   }
 
   &__btn {
-    outline: none;
-    width: 296px;
-    height: 64px;
-
-    border: none;
-    border-radius: 12px;
-
-    background-color: $orange-100;
-    color: $white-100;
-    font-size: 20px;
-
-    cursor: pointer;
-
-    &:hover {
-      background-color: $orange-80;
-    }
+    @include defaultButton;
   }
 }

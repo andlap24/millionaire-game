@@ -10,6 +10,6 @@ export const App = () => (
   <Switch>
     <Route path="/game" component={Game} />
     <Route path="/gameover" component={GameOver} />
-    <Route path="/" component={Main} />
+    <Route path="/" exact component={Main} />
   </Switch>
 );
