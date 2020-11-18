@@ -56,79 +56,79 @@
   },
   {
     "id": 6,
-    "correct": "All of the above",
+    "question": "An albino gorilla usually has what color fur?",
     "content": [
-        "developed the telescope",
-        "discovered four satellites of Jupiter",
-        "discovered that the movement of pendulum produces a regular time measurement",
-        "All of the above"
+      "Brown",
+      "Black",
+      "White",
+      "Golden"
     ],
-    "question": "Galileo was an Italian astronomer who"
+    "correct": "White"
   },
   {
     "id": 7,
-    "correct": "the ultraviolet rays convert skin oil into Vitamin D",
+    "question": "What is commonly known as the \"Emerald City\" in the United States?",
     "content": [
-        "the infrared light kills bacteria in the body",
-        "resistance power increases",
-        "the pigment cells in the skin get stimulated and produce a healthy tan",
-        "the ultraviolet rays convert skin oil into Vitamin D"
+      "Palos Verdes, CA",
+      "Seattle, WA",
+      "New York, NY",
+      "Dallas, TX"
     ],
-    "question": "Exposure to sunlight helps a person improve his health because"
+    "correct": "Seattle, WA"
   },
   {
     "id": 8,
-    "correct": "a club or a local sport association for remarkable achievements",
+    "question": "What is the national emblem of Canada?",
     "content": [
-        "a club or a local sport association for remarkable achievements",
-        "amateur athlete, not necessarily an Olympian",
-        "National Olympic Committee for outstanding work",
-        "None of the above"
+      "Maple Leaf",
+      "Brown Bear",
+      "Maple Syrup",
+      "Waffle"
     ],
-    "question": "Sir Thomas Fearnley Cup is awarded to"
+    "correct": "Maple Leaf"
   },
   {
     "id": 9,
-    "correct": "1929",
+    "question": "Oscar Awards were instituted in",
     "content": [
         "1968",
         "1929",
         "1901",
         "1965"
     ],
-    "question": "Oscar Awards were instituted in"
+    "correct": "1929"
   },
   {
     "id": 10,
-    "correct": "1979",
+    "question": "When did Margaret Thatcher became the first female Prime Minister of Britain?",
     "content": [
         "1998",
         "1989",
         "1979",
         "1800"
     ],
-    "question": "When did Margaret Thatcher became the first female Prime Minister of Britain?"
+    "correct": "1979"
   },
   {
     "id": 11,
-    "correct": "1st May",
+    "question": "Will I get an offer from Genesis?",
     "content": [
-        "15th April",
-        "12th December",
-        "1st May",
-        "1st August"
+        "Yes",
+        "Of course",
+        "Sure, bro",
+        "All above"
     ],
-    "question": "When is the International Workers' Day?"
+    "correct": "Sure, bro"
   },
   {
     "id": 12,
-    "correct": "1964",
+    "question": "When did China test their first atomic device?",
     "content": [
         "1962",
         "1963",
         "1964",
         "1965"
     ],
-    "question": "When did China test their first atomic device?"
+    "correct": "1964"
   }
 ]
