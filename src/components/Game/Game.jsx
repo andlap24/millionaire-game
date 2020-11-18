@@ -13,13 +13,15 @@ export const Game = () => {
   const [id, setId] = useState(1);
   const [counter, setCounter] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState([]);
-  // eslint-disable-next-line
-  const [buttonVisibility, setButtonVisibility] = useState('body__question-btn');
+  const [
+    buttonVisibility,
+    setButtonVisibility,
+  ] = useState('body__question-btn');
 
-  const handleQuestion = (questionId, correctAnswer, userAnswer) => {
-    if (userAnswer === correctAnswer) {
+  const handleQuestion = (questionId, correctAnswer) => {
+    if (selectedAnswer === correctAnswer) {
       setId(questionId + 1);
-      scoreCouner();
+      scoreCounter();
     }
   };
 
@@ -32,9 +34,7 @@ export const Game = () => {
     setButtonVisibility('body__question-btn--visible')
   );
 
-  const scoreCouner = () => (
-    // eslint-disable-next-line
-    console.log(counter),
+  const scoreCounter = () => (
     setCounter(counter + 1)
   );
 
@@ -50,7 +50,7 @@ export const Game = () => {
               <button
                 type="button"
                 className={buttonVisibility}
-                onClick={() => handleQuestion()}
+                onClick={() => handleQuestion(question.id, question.correct)}
               >
                 Submit
               </button>
