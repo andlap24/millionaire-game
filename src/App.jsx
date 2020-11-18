@@ -11,7 +11,6 @@ export const App = () => (
     <Route path="/gameover" component={GameOver} />
     <Route path="/game" component={Game} />
     <Route path="/" exact component={Main} />
-
-    <p>Page not found</p>
+    <Route render={() => <h1>404: page not found</h1>} />
   </Switch>
 );
