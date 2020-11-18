@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "./static/css/main.a42eea8e.chunk.css",
-    "main.js": "./static/js/main.87e6bca8.chunk.js",
-    "main.js.map": "./static/js/main.87e6bca8.chunk.js.map",
+    "main.js": "./static/js/main.3426fe3b.chunk.js",
+    "main.js.map": "./static/js/main.3426fe3b.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.8d3575a0.js",
     "runtime-main.js.map": "./static/js/runtime-main.8d3575a0.js.map",
-    "static/js/2.af85117b.chunk.js": "./static/js/2.af85117b.chunk.js",
-    "static/js/2.af85117b.chunk.js.map": "./static/js/2.af85117b.chunk.js.map",
+    "static/js/2.79e4ef6c.chunk.js": "./static/js/2.79e4ef6c.chunk.js",
+    "static/js/2.79e4ef6c.chunk.js.map": "./static/js/2.79e4ef6c.chunk.js.map",
     "index.html": "./index.html",
     "static/css/main.a42eea8e.chunk.css.map": "./static/css/main.a42eea8e.chunk.css.map",
-    "static/js/2.af85117b.chunk.js.LICENSE.txt": "./static/js/2.af85117b.chunk.js.LICENSE.txt",
+    "static/js/2.79e4ef6c.chunk.js.LICENSE.txt": "./static/js/2.79e4ef6c.chunk.js.LICENSE.txt",
     "static/media/Game.scss": "./static/media/wrong-rectangle.9c4510c7.svg",
     "static/media/Scores.scss": "./static/media/small-inactive-rect.749341bc.svg",
     "static/media/thumb-up.86eff2ed.svg": "./static/media/thumb-up.86eff2ed.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8d3575a0.js",
-    "static/js/2.af85117b.chunk.js",
+    "static/js/2.79e4ef6c.chunk.js",
     "static/css/main.a42eea8e.chunk.css",
-    "static/js/main.87e6bca8.chunk.js"
+    "static/js/main.3426fe3b.chunk.js"
   ]
 }
