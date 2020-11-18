@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './GameOver.scss';
 
 import { Link } from 'react-router-dom';
 import { ReactComponent as ThumbUp } from '../../images/thumb-up.svg';
 
-export const GameOver = () => (
+export const GameOver = ({ totalScore }) => (
   <div className="game-over">
     <div className="game-over__image">
       <ThumbUp />
@@ -15,7 +16,7 @@ export const GameOver = () => (
           Total score:
         </span>
         <br />
-        $8,000 earned
+        {`${totalScore} earned`}
       </p>
       <Link to="/">
         <button
@@ -28,3 +29,7 @@ export const GameOver = () => (
     </div>
   </div>
 );
+
+GameOver.propTypes = {
+  totalScore: PropTypes.string.isRequired,
+};

@@ -8,8 +8,10 @@ import { GameOver } from './components/GameOver';
 
 export const App = () => (
   <Switch>
-    <Route path="/game" component={Game} />
     <Route path="/gameover" component={GameOver} />
+    <Route path="/game" component={Game} />
     <Route path="/" exact component={Main} />
+
+    <p>Page not found</p>
   </Switch>
 );

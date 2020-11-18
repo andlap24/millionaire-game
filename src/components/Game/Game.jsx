@@ -1,27 +1,32 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
-/* import { Link } from 'react-router-dom'; */
+import { Redirect } from 'react-router-dom';
 import classNames from 'classnames';
 import './Game.scss';
 
 import { Scores } from '../Scores';
-/* import { GameOver } from '../GameOver'; */
+import { GameOver } from '../GameOver';
 import questions from '../../api/questions.json';
+import scores from '../../api/scores.json';
 
 export const Game = () => {
   const [id, setId] = useState(1);
   const [counter, setCounter] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState([]);
+  const [isCorrectAnswer, setIsCorrectAnswer] = useState(true);
   const [
     buttonVisibility,
     setButtonVisibility,
   ] = useState('body__question-btn');
+  const [totalScore, setTotalScore] = useState([]);
 
-  const handleQuestion = (questionId, correctAnswer) => {
-    if (selectedAnswer === correctAnswer) {
+  const handleQuestion = (questionId, correct) => {
+    if (selectedAnswer === correct) {
       setId(questionId + 1);
       scoreCounter();
+    } else {
+      setIsCorrectAnswer(false);
     }
   };
 
@@ -34,9 +39,14 @@ export const Game = () => {
     setButtonVisibility('body__question-btn--visible')
   );
 
-  const scoreCounter = () => (
-    setCounter(counter + 1)
-  );
+  const scoreCounter = () => {
+    setCounter(counter + 1);
+    scores.map(score => setTotalScore(
+      counter === score.id
+        ? score.score
+        : '',
+    ));
+  };
 
   return (
     <div className="Game">
@@ -80,6 +90,11 @@ export const Game = () => {
         ))}
       </div>
       <Scores counter={counter} />
+      {(counter > 11 || !isCorrectAnswer) && (
+        <Redirect to="/gameover">
+          <GameOver totalScore={totalScore} />
+        </Redirect>
+      )}
     </div>
   );
 };
