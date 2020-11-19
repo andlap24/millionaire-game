@@ -2,14 +2,11 @@ import React from 'react';
 import './Main.scss';
 
 import { Link } from 'react-router-dom';
-import { ReactComponent as ThumbUp } from '../../images/thumb-up.svg';
 
 export const Main = () => (
   <div className="wrapper">
     <div className="App">
-      <div className="App__main-image">
-        <ThumbUp />
-      </div>
+      <div className="App__main-image" />
       <div className="App__main main">
         <h1 className="main__title">
           Who wants to be

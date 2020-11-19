@@ -1,4 +1,5 @@
 @import '../../styles/vars.scss';
+@import '../../styles/mixins.scss';
 
 .wrapper {
   background: linear-gradient(to left top, $orange-5 0%, $orange-5 50%, transparent 50%);
@@ -14,9 +15,12 @@
   height: 100vh;
 
   &__main-image {
+    background: $desktop-thumb-up;
     width: 624px;
     height: 367px;
   }
+
+  transition: transform 0.3s;
 }
 
 .main {
@@ -29,5 +33,51 @@
 
   &__btn {
     @include defaultButton;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .App {
+    transform: scale(0.8);
+
+    &__main-image {
+      background: $mobile-thumb-up;
+      width: 288px;
+      height: 192px;
+    }
+  }
+
+  .main {
+    &__title {
+      user-select: none;
+      font-size: 48px;
+      line-height: 65px;
+      margin-bottom: 64px;
+    }
+
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .App {
+    flex-direction: column;
+    justify-content: center;
+
+    &__main-image {
+      margin-bottom: 30px;
+    }
+  }
+
+  .main {
+    &__title {
+      font-size: 32px;
+      line-height: 37px;
+      text-align: center;
+      margin-bottom: 102px;
+    }
+
+    &__btn {
+      @include defaultSmallButton;
+    }
   }
 }

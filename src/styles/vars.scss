@@ -11,21 +11,13 @@ $black-40: #D0D0D8;
 $black-5: #F5F5F7;
 $white-100: #FFFFFF;
 
-@mixin defaultButton {
-  outline: none;
-  width: 296px;
-  height: 64px;
+$desktop-thumb-up: url(../../images/thumb-up.svg) no-repeat;
+$mobile-thumb-up: url(../../images/mobile/mobile-thumb-up.svg) no-repeat;
 
-  border: none;
-  border-radius: 12px;
+$hover-rectangle: url(../../images/hover-rectangle.svg) no-repeat;
+$mobile-hover-rectangle: url(../../images/mobile/mobile-hover-rectangle.svg) no-repeat;
+$mobile-inactive-rectangle: url(../../images/mobile/mobile-inactive-rectangle.svg) no-repeat;
+$mobile-selected-rectangle: url(../../images/mobile/mobile-selected-rectangle.svg) no-repeat;
 
-  background-color: $orange-100;
-  color: $white-100;
-  font-size: 20px;
-
-  cursor: pointer;
-
-  &:hover {
-    background-color: $orange-80;
-  }
-}
+$tablet-width: 768px;
+$mobile-width: 450px;
