@@ -11,13 +11,15 @@ export const Scores = ({ counter }) => (
   <>
     <div className="scores">
       {scores.map(score => (
-        <div className={classNames(
-          counter === score.id
-            ? 'scores__item--active'
-            : 'scores__item',
-        )}
+        <div
+          key={score.id}
+          className={classNames(
+            counter === score.id
+              ? 'scores__item--active'
+              : 'scores__item',
+          )}
         >
-          <div>{score.score}</div>
+          {score.score}
         </div>
       ))}
     </div>

@@ -12,7 +12,7 @@ import scores from '../../api/scores.json';
 export const Game = () => {
   const [id, setId] = useState(1);
   const [counter, setCounter] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState([]);
+  const [selectedAnswer, setSelectedAnswer] = useState('');
   const [isCorrectAnswer, setIsCorrectAnswer] = useState(true);
   const [isButtonVisible, setIsButtonVisible] = useState(false);
   const [totalScore, setTotalScore] = useState('$0');
