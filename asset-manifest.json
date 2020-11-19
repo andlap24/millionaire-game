@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/millionaire-game/static/css/main.8c3185e5.chunk.css",
-    "main.js": "/millionaire-game/static/js/main.56c9cbdf.chunk.js",
-    "main.js.map": "/millionaire-game/static/js/main.56c9cbdf.chunk.js.map",
+    "main.css": "/millionaire-game/static/css/main.0f498118.chunk.css",
+    "main.js": "/millionaire-game/static/js/main.e534823a.chunk.js",
+    "main.js.map": "/millionaire-game/static/js/main.e534823a.chunk.js.map",
     "runtime-main.js": "/millionaire-game/static/js/runtime-main.d6366da1.js",
     "runtime-main.js.map": "/millionaire-game/static/js/runtime-main.d6366da1.js.map",
-    "static/js/2.79e4ef6c.chunk.js": "/millionaire-game/static/js/2.79e4ef6c.chunk.js",
-    "static/js/2.79e4ef6c.chunk.js.map": "/millionaire-game/static/js/2.79e4ef6c.chunk.js.map",
+    "static/js/2.bf71219b.chunk.js": "/millionaire-game/static/js/2.bf71219b.chunk.js",
+    "static/js/2.bf71219b.chunk.js.map": "/millionaire-game/static/js/2.bf71219b.chunk.js.map",
     "index.html": "/millionaire-game/index.html",
-    "static/css/main.8c3185e5.chunk.css.map": "/millionaire-game/static/css/main.8c3185e5.chunk.css.map",
-    "static/js/2.79e4ef6c.chunk.js.LICENSE.txt": "/millionaire-game/static/js/2.79e4ef6c.chunk.js.LICENSE.txt",
+    "static/css/main.0f498118.chunk.css.map": "/millionaire-game/static/css/main.0f498118.chunk.css.map",
+    "static/js/2.bf71219b.chunk.js.LICENSE.txt": "/millionaire-game/static/js/2.bf71219b.chunk.js.LICENSE.txt",
     "static/media/Game.scss": "/millionaire-game/static/media/wrong-rectangle.9c4510c7.svg",
-    "static/media/Scores.scss": "/millionaire-game/static/media/small-inactive-rect.749341bc.svg",
-    "static/media/thumb-up.86eff2ed.svg": "/millionaire-game/static/media/thumb-up.86eff2ed.svg"
+    "static/media/Main.scss": "/millionaire-game/static/media/thumb-up.dbb74bc4.svg",
+    "static/media/Scores.scss": "/millionaire-game/static/media/small-inactive-rect.749341bc.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d6366da1.js",
-    "static/js/2.79e4ef6c.chunk.js",
-    "static/css/main.8c3185e5.chunk.css",
-    "static/js/main.56c9cbdf.chunk.js"
+    "static/js/2.bf71219b.chunk.js",
+    "static/css/main.0f498118.chunk.css",
+    "static/js/main.e534823a.chunk.js"
   ]
 }
