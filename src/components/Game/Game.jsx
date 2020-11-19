@@ -6,7 +6,6 @@ import './Game.scss';
 
 import { Scores } from '../Scores';
 import { AnswerList } from '../AnswerList';
-import { GameOver } from '../GameOver';
 import questions from '../../api/questions.json';
 import scores from '../../api/scores.json';
 
@@ -16,7 +15,7 @@ export const Game = () => {
   const [selectedAnswer, setSelectedAnswer] = useState([]);
   const [isCorrectAnswer, setIsCorrectAnswer] = useState(true);
   const [isButtonVisible, setIsButtonVisible] = useState(false);
-  const [totalScore, setTotalScore] = useState([]);
+  const [totalScore, setTotalScore] = useState('$0');
 
   const handleQuestion = (questionId, correct) => {
     if (selectedAnswer === correct) {
@@ -35,11 +34,14 @@ export const Game = () => {
 
   const scoreCounter = () => {
     setCounter(counter + 1);
-    scores.map(score => setTotalScore(
-      counter === score.id
-        ? score.score
-        : '',
-    ));
+
+    scores.some((score) => {
+      if (id === score.id) {
+        return setTotalScore(score.score);
+      }
+
+      return null;
+    });
   };
 
   return (
@@ -78,9 +80,7 @@ export const Game = () => {
       <Scores counter={counter} />
 
       {(counter > 11 || !isCorrectAnswer) && (
-        <Redirect to="/gameover">
-          <GameOver totalScore={totalScore} />
-        </Redirect>
+        <Redirect to={`gameover/:${totalScore}`} />
       )}
     </div>
   );

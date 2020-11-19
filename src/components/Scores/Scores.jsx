@@ -7,46 +7,41 @@ import { stack as Menu } from 'react-burger-menu';
 
 import scores from '../../api/scores.json';
 
-export const Scores = ({ counter }) => {
-  // eslint-disable-next-line
-  const showSettings = event => (
-    event.preventDefault()
-  );
+export const Scores = ({ counter }) => (
+  <>
+    <div className="scores">
+      {scores.map(score => (
+        <div className={classNames(
+          counter === score.id
+            ? 'scores__item--active'
+            : 'scores__item',
+        )}
+        >
+          <div>{score.score}</div>
+        </div>
+      ))}
+    </div>
 
-  return (
-    <>
-      <div className="scores">
-        {scores.map(score => (
-          <div className={classNames(
-            counter === score.id
-              ? 'scores__item--active'
-              : 'scores__item',
-          )}
-          >
-            <div>{score.score}</div>
-          </div>
-        ))}
-      </div>
-
-      <Menu
-        right
-        disableAutoFocus
-        itemListElement="div"
-      >
-        {scores.map(score => (
-          <div className={classNames(
-            counter === score.id
-              ? 'scores__item--active'
-              : 'scores__item',
-          )}
-          >
-            <div>{score.score}</div>
-          </div>
-        ))}
-      </Menu>
-    </>
-  );
-};
+    <Menu
+      right
+      // eslint-disable-next-line
+      width={'100%'}
+      disableAutoFocus
+      itemListElement="div"
+    >
+      {scores.map(score => (
+        <div className={classNames(
+          counter === score.id
+            ? 'scores__item--active'
+            : 'scores__item',
+        )}
+        >
+          <div>{score.score}</div>
+        </div>
+      ))}
+    </Menu>
+  </>
+);
 
 Scores.propTypes = {
   counter: PropTypes.number.isRequired,

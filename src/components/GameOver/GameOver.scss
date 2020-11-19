@@ -9,6 +9,7 @@
   height: 100vh;
 
   &__image {
+    background: $desktop-thumb-up;
     width: 624px;
     height: 367px;
   }
@@ -27,5 +28,51 @@
 
   &__btn {
     @include defaultButton;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .game-over {
+    transform: scale(0.8);
+
+    &__image {
+      background: $mobile-thumb-up;
+      width: 288px;
+      height: 192px;
+    }
+  }
+
+  .main {
+    &__text {
+      user-select: none;
+      font-size: 48px;
+      line-height: 65px;
+      margin-bottom: 64px;
+    }
+
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .game-over {
+    flex-direction: column;
+    justify-content: center;
+
+    &__image {
+      margin-bottom: 30px;
+    }
+  }
+
+  .main {
+    &__text {
+      font-size: 32px;
+      line-height: 37px;
+      text-align: center;
+      margin-bottom: 102px;
+    }
+
+    &__btn {
+      @include defaultSmallButton;
+    }
   }
 }
