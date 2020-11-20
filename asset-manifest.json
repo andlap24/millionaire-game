@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/millionaire-game/static/css/main.de4119b7.chunk.css",
-    "main.js": "/millionaire-game/static/js/main.222ac353.chunk.js",
-    "main.js.map": "/millionaire-game/static/js/main.222ac353.chunk.js.map",
+    "main.js": "/millionaire-game/static/js/main.a63f656f.chunk.js",
+    "main.js.map": "/millionaire-game/static/js/main.a63f656f.chunk.js.map",
     "runtime-main.js": "/millionaire-game/static/js/runtime-main.d6366da1.js",
     "runtime-main.js.map": "/millionaire-game/static/js/runtime-main.d6366da1.js.map",
     "static/js/2.bf71219b.chunk.js": "/millionaire-game/static/js/2.bf71219b.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.d6366da1.js",
     "static/js/2.bf71219b.chunk.js",
     "static/css/main.de4119b7.chunk.css",
-    "static/js/main.222ac353.chunk.js"
+    "static/js/main.a63f656f.chunk.js"
   ]
 }
