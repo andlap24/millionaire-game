@@ -1,0 +1,109 @@
+@import '../../styles/vars.scss';
+@import '../../styles/mixins.scss';
+
+.Game {
+  display: flex;
+  height: 100vh;
+}
+
+.body {
+  flex-grow: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: $black-5;
+
+  padding: 133px 80px 122px;
+
+  &__question {
+    font-size: 32px;
+    max-width: 624px;
+  }
+
+  &__question-btn {
+    visibility: hidden;
+  }
+
+  &__question-btn--visible {
+    @include defaultButton;
+    visibility: visible;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 405px);
+  gap: 32px 0;
+  margin: 0 auto;
+
+  &__option {
+    background: url(../../images/inactive-rectangle.svg) no-repeat;
+    cursor: pointer;
+  }
+
+  &__option:hover {
+    background: $hover-rectangle;
+  }
+
+  &__option--correct {
+    @extend .list__option;
+    background: url(../../images/correct-rectangle.svg) no-repeat;
+  }
+
+  &__option--wrong {
+    @extend .list__option;
+    background: url(../../images/wrong-rectangle.svg) no-repeat;
+  }
+
+  &__option--selected {
+    background: url(../../images/selected-rectangle.svg) no-repeat;
+  }
+
+  &__option-text {
+    user-select: none;
+    line-height: 72px;
+    margin-left: 48px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .body {
+    padding: 136px 0 20px;
+
+    &__question {
+      font-size: 18px;
+      max-width: 310px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &__question-btn--visible {
+      @include defaultSmallButton;
+      visibility: visible;
+      margin: 0 auto;
+    }
+  }
+
+  .list {
+    grid-template-columns: 288px;
+    gap: 8px 0;
+
+    &__option {
+      background: $mobile-inactive-rectangle;
+    }
+
+    &__option:hover {
+      background: $mobile-hover-rectangle;
+    }
+
+    &__option--selected {
+      background: $mobile-selected-rectangle;
+    }
+
+    &__option-text {
+      line-height: 56px;
+    }
+  }
+}

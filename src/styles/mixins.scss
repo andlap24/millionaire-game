@@ -1,0 +1,37 @@
+@mixin defaultButton {
+  outline: none;
+  width: 296px;
+  height: 64px;
+
+  border: none;
+  border-radius: 12px;
+
+  background-color: $orange-100;
+  color: $white-100;
+  font-size: 20px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $orange-80;
+  }
+}
+
+@mixin defaultSmallButton {
+  outline: none;
+  width: 288px;
+  height: 48px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: $orange-100;
+  color: $white-100;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $orange-80;
+  }
+}

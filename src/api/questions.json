@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "question" : "In what children's game are participants chased by someone designated \"It\"?",
+    "content" : [
+        "Tag",
+        "Simon Says",
+        "Charades",
+        "Hopscotch"
+    ],
+    "correct" : "Tag"
+  },
+  {
+    "id": 2,
+    "question" : "On a radio, stations are changed by using what control?",
+    "content" : [
+        "Tuning",
+        "Volume",
+        "Bass",
+        "Treble"
+    ],
+    "correct" : "Tuning"
+  },
+  {
+    "id": 3,
+    "question" : "Which material is most dense?",
+    "content" : [
+        "Silver",
+        "Styrofoam",
+        "Butter",
+        "Gold"
+    ],
+    "correct" : "Gold"
+  },
+  {
+    "id": 4,
+    "question" : "Which state in the United States is largest by area?",
+    "content" : [
+        "Alaska",
+        "California",
+        "Texas",
+        "Hawaii"
+    ],
+    "correct" : "Alaska"
+  },
+  {
+    "id": 5,
+    "question" : "What is Aurora Borealis commonly known as?",
+    "content" : [
+        "Fairy Dust",
+        "Northern Lights",
+        "Book of ages",
+        "Game of Thrones"
+    ],
+    "correct" : "Northern Lights"
+  },
+  {
+    "id": 6,
+    "question": "Will I get an offer from Genesis?",
+    "content": [
+        "Yes",
+        "Of course",
+        "Sure, bro",
+        "All above"
+    ],
+    "correct": "Sure, bro"
+  },
+  {
+    "id": 7,
+    "question": "What is commonly known as the \"Emerald City\" in the United States?",
+    "content": [
+      "Palos Verdes, CA",
+      "Seattle, WA",
+      "New York, NY",
+      "Dallas, TX"
+    ],
+    "correct": "Seattle, WA"
+  },
+  {
+    "id": 8,
+    "question": "What is the national emblem of Canada?",
+    "content": [
+      "Maple Leaf",
+      "Brown Bear",
+      "Maple Syrup",
+      "Waffle"
+    ],
+    "correct": "Maple Leaf"
+  },
+  {
+    "id": 9,
+    "question": "Oscar Awards were instituted in",
+    "content": [
+        "1968",
+        "1929",
+        "1901",
+        "1965"
+    ],
+    "correct": "1929"
+  },
+  {
+    "id": 10,
+    "question": "When did Margaret Thatcher became the first female Prime Minister of Britain?",
+    "content": [
+        "1998",
+        "1989",
+        "1979",
+        "1800"
+    ],
+    "correct": "1979"
+  },
+  {
+    "id": 11,
+    "question": "An albino gorilla usually has what color for?",
+    "content": [
+      "Brown",
+      "Black",
+      "White",
+      "Golden"
+    ],
+    "correct": "White"
+  },
+  {
+    "id": 12,
+    "question": "When did China test their first atomic device?",
+    "content": [
+        "1962",
+        "1963",
+        "1964",
+        "1965"
+    ],
+    "correct": "1964"
+  }
+]
