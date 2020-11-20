@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -13,9 +14,7 @@ export const AnswerList = ({ answer, checkAnswer, selectedAnswer }) => (
         : 'list__option',
     )}
     role="button"
-    onClick={() => (
-      checkAnswer(answer)
-    )}
+    onClick={() => checkAnswer(answer)}
   >
     <p className="list__option-text">
       <span>A: </span>

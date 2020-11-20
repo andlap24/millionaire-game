@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import './Game.scss';
@@ -10,6 +8,7 @@ import questions from '../../api/questions.json';
 import scores from '../../api/scores.json';
 
 export const Game = () => {
+  const maxAnswersCount = 12;
   const [id, setId] = useState(1);
   const [counter, setCounter] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('');
@@ -79,7 +78,7 @@ export const Game = () => {
 
       <Scores counter={counter} />
 
-      {(counter > 11 || !isCorrectAnswer) && (
+      {(counter >= maxAnswersCount || !isCorrectAnswer) && (
         <Redirect to={`gameover/:${totalScore}`} />
       )}
     </div>

@@ -56,14 +56,14 @@
   },
   {
     "id": 6,
-    "question": "An albino gorilla usually has what color fur?",
+    "question": "Will I get an offer from Genesis?",
     "content": [
-      "Brown",
-      "Black",
-      "White",
-      "Golden"
+        "Yes",
+        "Of course",
+        "Sure, bro",
+        "All above"
     ],
-    "correct": "White"
+    "correct": "Sure, bro"
   },
   {
     "id": 7,
@@ -111,14 +111,14 @@
   },
   {
     "id": 11,
-    "question": "Will I get an offer from Genesis?",
+    "question": "An albino gorilla usually has what color for?",
     "content": [
-        "Yes",
-        "Of course",
-        "Sure, bro",
-        "All above"
+      "Brown",
+      "Black",
+      "White",
+      "Golden"
     ],
-    "correct": "Sure, bro"
+    "correct": "White"
   },
   {
     "id": 12,
